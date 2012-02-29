@@ -1,0 +1,15 @@
+*.bbl
+*.blg
+*.toc
+*.aux
+*.pdf
+*.out
+*.log
+*.bak
+*.synctex.gz
+*.lof
+*.lot
+*.thm
+*.tdo
+*~
+~$*

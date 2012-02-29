@@ -1,0 +1,106 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+%%
+%% This is file `thesis.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% nudtpaper.dtx  (with options: `thesis')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2010 by Liu Benyuan <liubenyuan@gmail.com>
+%% 
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3a
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3a or later is part of all distributions of LaTeX
+%% version 2004/10/01 or later.
+%% 
+%% To produce the documentation run the original source files ending with `.dtx'
+%% through LaTeX.
+%% 
+%% Any Suggestions : LiuBenYuan <liubenyuan@gmail.com>
+%% Thanks Xue Ruini <xueruini@gmail.com> for the thuthesis class!
+%% Thanks sofoot for the original NUDT paper class!
+%% 
+%1. 规范硕士导言
+% \documentclass[master,ttf]{nudtpaper}
+%2. 规范博士导言
+% \documentclass[doctor,twoside,ttf]{nudtpaper}
+%3. 如果使用是Vista
+% \documentclass[master,ttf,vista]{nudtpaper}
+%4. 建议使用OTF字体获得较好的页面显示效果
+%   OTF字体从网上获得，各个系统名称统一，不用加vista选项
+%   如果你下载的是最新的(1201)OTF英文字体，建议修改nudtpaper.cls，使用PS Std
+% \documentclass[doctor,twoside,otf]{nudtpaper}
+%5. 如果想生成盲评，传递anon即可，仍需修改个人成果部分
+% \documentclass[master,otf,anon]{nudtpaper}
+%
+\documentclass[doctor,twoside,otf]{whupaper}
+\usepackage{mynudt}
+
+\classification{TP18} %分类号
+\confidentiality{公开} %密级
+\UDC{004.8}       %UDC
+\serialno{10486} %编号：10486是武汉大学的高校编号
+\title{钢铁生产调度中的免疫优化算法研究}
+\displaytitle{钢铁生产调度中的免疫优化算法研究} %页面中显示的内容
+\author{吕\quad{}林}
+\zhdate{\zhtoday}
+\entitle{Research on  Immune Optimization Algorithms  under The Scheduling of Steel Production}
+\enauthor{Lu Lin}
+\endate{\entoday}
+\subject{计算机应用技术} %专业
+\ensubject{Computer Application Technology}
+\researchfield{人工免疫}%研究方向
+\supervisor{梁意文\quad{}教授}%指导教师姓名、职称
+%\cosupervisor{王五\quad{}副教授} % 没有就空着
+\ensupervisor{Professor Liang Yiwen}
+%\encosupervisor{}
+%\papertype{工学}
+\papertype{}
+%\enpapertype{Engineering}
+
+\begin{document}
+\graphicspath{{figures/}}
+% 制作封面，生成目录，插入摘要
+\maketitle
+\frontmatter
+\input{data/creation} %放在frontmatter前面会有章节号，但是怎样让它不在目录里面出现呢？
+
+\midmatter
+\input{data/abstract}
+\tableofcontents
+\listoftables
+\listoffigures
+%\input{data/denotation} %符号列表
+
+%书写正文，可以根据需要增添章节; 正文还包括致谢，参考文献与成果
+\mainmatter
+\input{data/chap01}
+\input{data/chap02}
+%\input{data/chap03}
+%\input{data/chap04}
+%\input{data/chap05}
+%\input{data/chap06}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+\bibliographystyle{bstutf8}
+\bibliography{ref/refs}
+
+\input{data/resume} %博士期间取得的学术成果
+% 最后，需要的话还要生成附录，全文随之结束。
+\appendix
+\backmatter
+\input{data/appendix01}
+\input{data/ack}
+
+\end{document}
