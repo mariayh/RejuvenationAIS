@@ -860,7 +860,7 @@
   volume = {45},
   pages = {311--332},
   number = {2},
-  __markedentry = {[mariayh:2]},
+  __markedentry = {[mariayh:]},
   file = {读书笔记:E\:\\000_我的研究\\01_已读论文 & 读书笔记\\04- 软件抗衰  软件衰退检测 性能评估\\(2001) Proactive management of software aging.docx:Word;(2001) Proactive Management of Software Aging.pdf:01-研究组分类文章\\11_Kishor S. Trivedi相关  _杜克大学\\(2001) Proactive Management of Software Aging.pdf:PDF},
   publisher = {IBM},
   review = {1）研究动机
@@ -870,7 +870,15 @@
 	
 	 用随机反馈网方法（Stochastic Reward nets，SRNs）开发若干个可靠性模型，来评估基于时间的和基于预测的抗衰策略对集群系统可靠性的影响。
 	
-	2)评议},
+	2)如何找到解决方案？
+	
+	 采用简单的基于时间模型的抗衰方法，易于在现有集群管理架构下实现；+ 基于检测和预测的抗衰方法（线性回归）预测资源耗竭引起的软件失效；这两种方法已分别在IBM
+	x系列服务器集群服务器上实现。（IBM Netfinity line of cluster servers）
+	
+	
+	3）未来工作
+	
+	 本文提出未来的工作之一是扩展本文提出的软件抗衰方法的应用范围，另一个是使软件抗衰方法具有自适应和多参数预测能力。目前实现的SRA（软件抗衰Agent），能够检测和预测任何指定的单个参数的耗竭，这种方法可能足够某些应用软件维持可用。但是它依赖于根据经验假设的会耗竭的资源类型和它们的耗竭阈值，而通常情况下，在任意的一个场景中，我们无从得知哪类资源的参数会耗竭。},
   timestamp = {2012.02.29}
 }
 
@@ -908,6 +916,17 @@
   year = {2001},
   organization = {Citeseer},
   file = {01-Extended classification of software faults based on aging.pdf:01-研究组分类文章\\11_Kishor S. Trivedi相关  _杜克大学\\01-Extended classification of software faults based on aging.pdf:PDF},
+  review = {软件抗衰方法分类。
+	
+	软件衰退模式：
+	
+	1）性能下降
+	
+	2）挂起或崩溃失效、或衰退导致的数据不一致
+	
+	故障模式：
+	
+	内存泄露或膨胀，未释放的文件锁，数据损坏，存储空间碎片，舍入误差错误累积},
   timestamp = {2012.02.29}
 }
 
@@ -919,7 +938,6 @@
   volume = {29},
   pages = {62--71},
   number = {1},
-  __markedentry = {[mariayh:4]},
   file = {(2001) Analysis and implementation of software rejuvenation in cluster systems.pdf:01-研究组分类文章\\11_Kishor S. Trivedi相关  _杜克大学\\(2001) Analysis and implementation of software rejuvenation in cluster systems.pdf:PDF},
   organization = {ACM} # s,
   owner = {mariayh},
@@ -1021,7 +1039,7 @@
   owner = {mariayh},
   review = {1、研究动机
 	
-	   文中未特别说明。摘要中提到基于时间模型的抗衰方法虽易实施，但实际应用效果却不怎么好。需要实际测量系统资源使用情况和系统活动，这些参数可以检测和估计系统资源耗竭。
+	 文中未特别说明。摘要中提到基于时间模型的抗衰方法虽易实施，但实际应用效果却不怎么好。需要实际测量系统资源使用情况和系统活动，这些参数可以检测和估计系统资源耗竭。
 	
 	2、评议
 	
@@ -1029,16 +1047,16 @@
 	
 	3、如何找到解决方案的？
 	
-	  1）线性回归分析，分析趋势（最小二乘法构造拟合函数）、Man-Kendall test
+	 1）线性回归分析，分析趋势（最小二乘法构造拟合函数）、Man-Kendall test
 	
-	  The least squares solution is r= 15.5655 +0.027t,where r is response
+	 The least squares solution is r= 15.5655 +0.027t,where r is response
 	time in milliseconds,t is the time from the beginning of the experiment.
 	
 	The 95% confidence interval for the slope is(0.02,0.04)ms/hour.
 	
-	  2）周期性分析
+	 2）周期性分析
 	
-	  3）ARMA（自回归滑动平均模型）},
+	 3）ARMA（自回归滑动平均模型）},
   timestamp = {2012.02.19}
 }
 
@@ -1050,7 +1068,7 @@
   booktitle = {Proc. 13th Int. Symp. Software Reliability Engineering ISSRE 2003},
   year = {2002},
   pages = {159--170},
-  __markedentry = {[mariayh:]},
+  __markedentry = {[mariayh:3]},
   abstract = {In order to reduce system outages and the associated downtime cost
 	caused by the "<span class='snippet'>software</span> aging" phenomenon,
 	we propose to use <span class='snippet'>software</span> <span class='snippet'>rejuvenation</span>
@@ -1065,6 +1083,7 @@
 	approach and the effect of the prediction coverage in the measurement-based
 	approach are also studied in this paper.},
   doi = {10.1109/ISSRE.2002.1173239},
+  file = {(2002) Modeling and analysis of software rejuvenation in cable modem termination systems.pdf:01-研究组分类文章\\11_Kishor S. Trivedi相关  _杜克大学\\(2002) Modeling and analysis of software rejuvenation in cable modem termination systems.pdf:PDF},
   timestamp = {2012.02.20}
 }
 
@@ -1094,6 +1113,20 @@
 	measures.},
   doi = {10.1109/ISSRE.2002.1173241},
   timestamp = {2012.02.20}
+}
+
+@INPROCEEDINGS{vaidyanathan2002analysis,
+  author = {Vaidyanathan, K. and Selvamuthu, D. and Trivedi, K.S.},
+  title = {Analysis of inspection-based preventive maintenance in operational
+	software systems},
+  booktitle = {Reliable Distributed Systems, 2002. Proceedings. 21st IEEE Symposium
+	on},
+  year = {2002},
+  pages = {286--295},
+  organization = {IEEE},
+  note = {第一次提出基于时间模型和度量的混合抗衰方法},
+  file = {(2002) Analysis of inspection-based preventive maintenance in operational software systems.pdf:01-研究组分类文章\\11_Kishor S. Trivedi相关  _杜克大学\\Kalyan Vaidyanathan(Ph.D_ Duke)\\(2002) Analysis of inspection-based preventive maintenance in operational software systems.pdf:PDF},
+  timestamp = {2012.03.15}
 }
 
 @PHDTHESIS{vaidyanathan2002proactive,
@@ -1491,6 +1524,32 @@
 	to solve the security aging problems.},
   doi = {10.1109/AINA.2004.1283854},
   timestamp = {2012.02.20}
+}
+
+@ARTICLE{aung2004software,
+  author = {Aung, K. and Park, J.},
+  title = {Software Rejuvenation Approach to Security Engineering},
+  journal = {Computational Science and Its Applications--ICCSA 2004},
+  year = {2004},
+  pages = {574--583},
+  note = {主成分分析法PCA},
+  abstract = {While traditional security mechanisms rely on preventive controls
+	and those are limited in surviving malicious attacks, we propose
+	a novel approach to security engineering. The objective is to characterize
+	the attacks in real time and survive in face of attacks by using
+	software rejuvenation. In this paper we address the critical intrusion
+	tolerance problems ahead of intrusion detection. Firstly, the attacks
+	are characterized by applying Principle Component Analysis (PCA)
+	and these characterized intrusions are analyzed according to their
+	state changes by utilizing transient state analysis. Subsequently,
+	the software rejuvenation methods are performed by killing the intruders’
+	processes in their tracks, halting abuse before it happens, shutting
+	down unauthorized connection, and responding and restarting in real
+	time. These slogans will really frustrate and deter the attacks,
+	as the attacker can’t make their progress. This is a way of survivability
+	to increase the deterrence level against an attack in the target
+	environment.},
+  publisher = {Springer}
 }
 
 @PHDTHESIS{bao2004adaptive,
@@ -1948,6 +2007,24 @@
   timestamp = {2012.02.20}
 }
 
+@ARTICLE{杨芙清2005软件工程技术发展思索,
+  author = {杨芙清},
+  title = {软件工程技术发展思索},
+  journal = {软件学报},
+  year = {2005},
+  volume = {16},
+  number = {1},
+  file = {(2005) 软件工程技术发展思索 (软件学报 -杨芙清).pdf:(2005) 软件工程技术发展思索 (软件学报 -杨芙清).pdf:PDF},
+  review = {计算环境演变
+	
+	网络软件运行环境：Internet开放、动态、多变的环境
+	
+	软件应该按照功能目标、性能目标、可信性目标动态演化，使系统具有较高的用户信赖度（维持较高的用户信赖度）
+	
+	软件应该具有反应性（具有适应internet的开放、动态、多变环境的感知能力）、演化性（具有适应internet的开放、动态、多变环境的应变能力），感知环境的变化、并随机应变},
+  timestamp = {2012.03.10}
+}
+
 @INPROCEEDINGS{Avritzer2006p435-444,
   author = {Avritzer, A. and Bondi, A. and Grottket, M. and Trivedi, K. S. and
 	Weyuker, E. J.},
@@ -2272,6 +2349,16 @@
   timestamp = {2012.02.20}
 }
 
+@TECHREPORT{tixeuil2006overview,
+  author = {Tixeuil, S. and Hoarau, W. and Silva, L.},
+  title = {An overview of existing tools for fault-injection and dependability
+	benchmarking in grids},
+  year = {2006},
+  booktitle = {Second CoreGRID Workshop on Grid and Peer to Peer Systems Architecture},
+  file = {An Overview of Existing Tools for Fault-Injection and Dependability Benchmarking in Grids.pdf:03-期刊论文 技术报告\\An Overview of Existing Tools for Fault-Injection and Dependability Benchmarking in Grids.pdf:PDF},
+  organization = {Citeseer}
+}
+
 @PHDTHESIS{徐建2006p-,
   author = {徐建},
   title = {软件抗衰的若干关键技术研究},
@@ -2304,6 +2391,23 @@
   timestamp = {2012.02.25}
 }
 
+@PHDTHESIS{钱鸿生2006p-,
+  author = {钱鸿生},
+  title = {基于风险管理的软件生命周期模型研究},
+  school = {同济大学（上海）},
+  year = {2006},
+  abstract = {本文根据软件工程学的基本原理，结合国际上软件生命周期模型的最新研究成果，对具有自主知识产权的大型软件开发(Software Developing)过程中的风险管理所面临的一些问题进行了较为全面的论述，在此基础上综合应用系统论、方法论和运筹学的有关知识，提出了一种新型的软件生命周期模型的研究框架和思路，即基于风险管理的软件生命周期模型。
+	首先作者提出了课题的来源，选题的依据和论文研究的结构和方法，并论述了本课题研究对于促进我国软件产业的成熟和发展，以及对提高软件项目管理(Software
+	Project Management)的水平可能产生的积极作用与影响。 然后作者对国际上软件生命周期模型研究中不同的建模思路和方法进行了论述，并从软件生命周期模型的一般过程的分析中，提出了分阶段进行风险识别的观点和过程风险的概念。
+	随后在进行了风险管理和软件生命周期模型关联分析的基础之上，揭示了在软件生命周期不同阶段中核心风险客观存在的事实，并从核心风险的要素分析中进一步提出了核心风险模板的概念，为从事软件项目管理人员提供了一种对可能出现的风险进行预测和判断的工具，从而为基于风险管理的软件生命周期模型体系的建立奠定了基础。
+	同样在提出了软件生命周期不同阶段核心风险的基础之上，对于影响整个软件开发过程可能发生的各类风险，提出了与软件开发及项目管理整个过程有关的过程风险模型，即COST模型图，并且分析了组织风险对于软件项目管理可能造成的重要影响。
+	作者运用基于风险管理的软件生命周期模型的一些基本观点，对各类风险概率的分布与风险识别的技术方法进行了重点研究，并把这种研究称之为风险管理的有效性分析，认为这种有效性分析是在基于风险管理的软件生命周期模型的核心风险模板和过程风险模板体系下的一种积极有效的应用，对于提高风险管理的效益和改进风险管理的技术，具有十分重要的意义。
+	案例分析是对一个典型的中美合资的大型软件企业—国信朗讯公司，在软件项目管理过程中应用本文提出的基于风险管理的软件生命周期模型进行了实证研究和成果分析。
+	最后在总结和展望中，作者对本文提出的一些基本观点进行了归纳分析并对基于风险管理的软件生命周期模型的理论意义和实际使用价值进行了探讨，同时指出了本论文研究中尚且存在的一些问题，为该课题进一步地研究提出了新的目标。},
+  file = {(2006) 基于风险管理的软件生命周期模型研究 (同济大学 博士论文).pdf:20- 软件生命周期\\(2006) 基于风险管理的软件生命周期模型研究 (同济大学 博士论文).pdf:PDF},
+  timestamp = {2012.03.15}
+}
+
 @ARTICLE{钱鸿生2006基于风险管理的软件生命周期模型研究,
   author = {钱鸿生 and 黄立平},
   title = {基于风险管理的软件生命周期模型研究},
@@ -2312,6 +2416,7 @@
   volume = {27},
   pages = {135--140},
   number = {5},
+  file = {(2006) 基于风险管理的软件生命周期模型研究 (通信学报).pdf:20- 软件生命周期\\(2006) 基于风险管理的软件生命周期模型研究 (通信学报).pdf:PDF},
   timestamp = {2012.02.29}
 }
 
@@ -2530,6 +2635,9 @@
   doi = {10.1109/NCA.2007.53},
   file = {使用虚拟化技术改进软件抗衰:E\:\\000_我的研究\\01_已读论文 & 读书笔记\\04- 软件抗衰  软件衰退检测 性能评估\\(2007) Using Virtualization to Improve Software Rejuvenation.docx:Word;(2007) Using Virtualization to Improve Software Rejuvenation.pdf:01-研究组分类文章\\13_Luis Silva & A.Andrzejak  _葡萄牙 科英布拉大学\\(2007) Using Virtualization to Improve Software Rejuvenation.pdf:PDF},
   review = {基于度量-阈值的抗衰策略，立论中有一些对软件抗衰的必要性的描述不错。详见读书笔记。
+	
+	"An Overview of Existing Tools for Fault-Injection and Dependability
+	Benchmarking in Grids
 	
 	1、研究动机
 	
@@ -2771,11 +2879,10 @@
   volume = {64},
   pages = {247 - 265},
   number = {3},
-  __markedentry = {[mariayh:4]},
   abstract = {This paper develops time-based rejuvenation policies to improve the
 	performability measures of a cluster system. Three rejuvenation policies,
 	namely standard rejuvenation, delayed rejuvenation and mixed rejuvenation,
-	are designed to improve the cluster鈥檚 performability under varying
+	are designed to improve the cluster performability under varying
 	workload. Analytic models are built to evaluate these three policies.
 	Since deterministic transitions are used in this paper and analytical
 	models based on homogeneous continuous-time Markov chains (CTMC)
@@ -2867,7 +2974,45 @@
   pdf = {01-研究组分类文章\13_Luis Silva & A.Andrzejak _葡萄牙 科英布拉大学\(2008) Using machine learning for non-intrusive modeling and prediction of software aging（SOA应用-应用server）.pdf},
   review = {non-intrusive:外置，非内置
 	
-	算法成立/有效的前提：用来训练的样本集比较完备、样本要有代表性，不能处理未知的衰退情况（未知的软件bug引起的衰退情况）},
+	1、研究动机
+	
+	先前的方法存在不足：先前的方法需要经过很多个抗衰周期收集初始数据集，来构建预测模型；无法应对不符合所构建的衰退模型的瞬时性失效；衰退模型的计算代价大，尤其是ARMA模型。
+	
+	需要专门的测试设置；
+	
+	时序分析等预测方法多为单变量的，而机器学习方法可同步考虑多个变量的变化。发现综合的衰退过程（复合的多种衰退问题）
+	
+	处理不确定性，使算法/模型具备自适应性，以应对瞬时故障和不确定性衰退效果
+	
+	
+	2、不足
+	
+	作者未测试他们提出的方法对动态的和涉及多个资源的衰退问题的效果.----Javier Alonso, Jordi Torres et.al,
+	“Adaptive on-line software aging prediction based on machine learning”,
+	2010 IEEE IIFIP International Conference on Dependable Systems &
+	Networks (DSN)
+	
+	3、评议
+	
+	算法成立/有效的前提：用来训练的样本集比较完备、样本要有代表性，不能处理未知的衰退情况（未知的软件bug引起的衰退情况）
+	
+	两种方法：
+	
+	1）基于work的
+	
+	基于work的方法，记录从上次抗衰执行开始，一定的时间间隔内，服务的最大请求数；当While this applies to a large
+	number of aging processes caused by resource depletion [3], such
+	models might fail if the dependencies are more complex or transient
+	failures occur. 
+	
+	2）基于机器学习的
+	
+	In a such scenario, we propose use machine learning classification
+	methods to predict performance in the near future. Such algorithms
+	are capable to model implicitly complex relationships, and become
+	more accurate with growing amount of the historical data.
+	
+	 步骤：a）特征提取；b）数据预处理（分类算法要求训练数据集中已经打好标签）；c）根据训练数据集，训练分类器；d）测试分类器；e）预测},
   timestamp = {2012.02.20}
 }
 
@@ -3896,6 +4041,15 @@
   timestamp = {2012.02.20}
 }
 
+@MASTERSTHESIS{linyijie2010Rejuvenation,
+  author = {林已杰},
+  title = {一种基于马尔科夫和神经网络的软件衰退预测方法研究},
+  school = {西南大学},
+  year = {2010},
+  file = {(2010) 一种基于马尔科夫和神经网络的软件衰退预测方法研究 (西南大学 硕士论文).pdf:23_国内其他中文论文\\(2010) 一种基于马尔科夫和神经网络的软件衰退预测方法研究 (西南大学 硕士论文).pdf:PDF},
+  timestamp = {2012.03.15}
+}
+
 @INPROCEEDINGS{Machida2010p1-6,
   author = {Machida, F. and Dong Seong Kim and Trivedi, K. S. },
   title = {Modeling and analysis of software rejuvenation in a server virtualized
@@ -3938,6 +4092,51 @@
   timestamp = {2012.02.20}
 }
 
+@INPROCEEDINGS{magalhaes2010detection,
+  author = {Magalhaes, J.P. and Silva, L.M.},
+  title = {Detection of performance anomalies in web-based applications},
+  booktitle = {Network Computing and Applications (NCA), 2010 9th IEEE International
+	Symposium on},
+  year = {2010},
+  pages = {60--67},
+  organization = {IEEE},
+  abstract = {Performance management and dependability are two of the fundamental
+	issues in business-critical applications. The ability to detect the
+	occurrence of performance failures and anomalies has raised the attention
+	of researchers in the last years. It is in fact a difficult problem,
+	since a visible change in the performance can result from some natural
+	cause (e.g., workload variations, upgrades) or by some internal anomaly
+	or fault that may end up in a performance failure or application
+	crash. Distinguish between the two scenarios is the goal of the framework
+	presented in this paper. Our framework is targeted for web-based
+	and component-based applications. It makes use of AOP-based monitoring,
+	data correlation techniques and time-series alignment algorithms
+	to spot the occurrence of performance anomalies avoiding false alarms
+	due to workload variations. The paper includes some experimental
+	results that show the effectiveness of our techniques under the occurrence
+	of dynamic workloads and some fault-load situations.
+	
+	性能管理和可靠性是业务关键的应用的两个基础问题。在过去的几年中，性能失效和异常检测能力已经引起了研究者的关注。实际上，这是个困难的问题，因为性能变化可能是由于负载变化或升级等自然、正常的因素引起的，也可能由会导致性能失效或应用崩溃的内部异常或故障引起的。该文利用基于AOP的监测器、数据相关性技术和时序分析（alignment定位）算法来识别性能异常，避免负载改变导致的false
+	alarm。实验结果显示本文方法的有效性},
+  file = {(2010) Detection of performance anomalies in web-based applications.pdf:01-研究组分类文章\\13_Luis Silva & A.Andrzejak  _葡萄牙 科英布拉大学\\(2010) Detection of performance anomalies in web-based applications.pdf:PDF},
+  review = {we also presented a framework targeted for detection, localization
+	and recovery from performance anomalies in web applications. Our
+	framework is able to distinguish a performance anomaly from a workload
+	variation. In some scenarios it is also able to identify the system
+	or applications parameters that are associated with the performance
+	anomaly. This root-cause analysis is crucial do select the most appropriate
+	recovery technique. These projects represent important advances but
+	there is still a high potential to work on techniques to estimate
+	and identify how multiple related parameters may result in a performance
+	or a crash failure.
+	
+	该文提出了一个框架，旨在检测、定位和恢复web应用软件中的性能异常。该框架能够从负载变化中区分开性能异常。在一些场景中，该框架也能够识别出与性能异常相关的系统或应用参数（导致性能异常的参数？根源？）。这种根本原因分析对选择最合适的恢复技术很关键。
+	
+	
+	这些工作由很重要的优势，但仍有很大的潜力来研究评估、识别多关联参数如何会导致性能异常或崩溃失效的技术},
+  timestamp = {2012.03.09}
+}
+
 @INPROCEEDINGS{Magalhães2010p1-7,
   author = {Magalhães, J.P. and Silva, L.M.},
   title = {Prediction of Performance Anomalies in Web-Applications Based-on
@@ -3947,9 +4146,67 @@
   year = {2010},
   pages = {1--7},
   organization = {IEEE},
+  abstract = {The topic of this paper is about prediction of performance anomalies
+	caused by software aging. We have developed a framework for detection
+	of performance anomalies that is targeted to web and component-based
+	applications. In this study, we selected some amount of historical
+	data previously collected and we conducted a correlation analysis
+	with this data. The resulting dataset was then submitted to some
+	Machine-Learning (ML) classification algorithms. The best algorithms
+	were selected according to the accuracy
+	
+	and precision. In a second step, we induced some synthetic aging scenarios
+	(memory leaks and CPU contention) in the application and we tried
+	to do estimation of the system parameters by using time-series analysis.
+	With the estimated values we conducted a classification with the
+	three previous ML algorithms. From the initial results we observed
+	that combining the estimation of parameters supported by time-series
+	models withML classification techniques provides some good results
+	on the prediction of performance anomalies.We also observed that
+	there is no single ML algorithm that can be applied effectively to
+	predict the response time for all the web-transactions.
+	
+	本文选取一定数量的历史数据，用这些数据构建相关性分析（特征提取？），分析结果被提交给一些机器学习分类算法。根据准确度和预测能力，挑选出最佳机器学习分类算法。接着，在web应用软件中诱导（induce）一些复合衰退场景（内存泄露和CPU竞争），用时序分析方法估计系统参数。利用时序分析方法的估计结果（估计值），该文用上述的3种机器学习算法进行分类。初步结果说明：组合时序分析模型提供的参数估计和机器学习分类算法，提供一些好的预测性能异常的结果；同时，作者也观察到没有单一的机器学习算法能够有效的预测所有web事务的响应时间。},
   file = {(2010) Prediction of Performance Anomalies in Web-Applications Based-on  Software Aging Scenarios.pdf:01-研究组分类文章\\13_Luis Silva & A.Andrzejak  _葡萄牙 科英布拉大学\\(2010) Prediction of Performance Anomalies in Web-Applications Based-on  Software Aging Scenarios.pdf:PDF},
   owner = {mariayh},
   pdf = {01-研究组分类文章\13_Luis Silva & A.Andrzejak _葡萄牙 科英布拉大学\(2010) Prediction of Performance Anomalies in Web-Applications Based-on Software Aging Scenarios.pdf},
+  review = {1、研究动机
+	
+	 预测web和基于组件的应用软件中不确定性软件衰退导致的性能异常的发生。
+	
+	2、评议
+	
+	 首先，在训练阶段，该文选取一定量的历史数据进行相关性分析，得到应用软件的响应时间和工作负载之间的相关系数，据此准备训练数据集和测试数据集，然后利用不同的机器学习分类算法（如决策树、神经网络）训练分类器，根据算法的准确度和预测能力挑选出最佳机器学习分类算法；接着，实时监测阶段，在web应用软件中诱导（induce）一些复合的衰退场景（如内存泄露和CPU竞争），用时序分析方法（如ARMA模型）估计实时采集的系统参数，最后用上述机器学习算法分类器对时序分析的结果进行分类，预测被监测的应用软件是否会发生性能异常。初步结果说明：组合时序分析模型提供的参数估计和机器学习分类算法，提供一些好的预测性能异常的结果；同时，作者也观察到没有单一的机器学习算法能够有效的预测所有web事务的响应时间。
+	
+	 1）采集的参数：剩余JVM内存（可用JVM内存）、应用服务器中运行的线程数、系统可用的文件描述器（file descriptors）、应用服务器上运行的class数、web服务器接收的网络字节数、web服务器发送的网络字节数、从硬盘读的字节数、写硬盘的字节数、闲置的CPU比率、运行队列中运行的进程数（num.
+	of processes running in the run-queue）、运行队列中阻塞的进程数、运行队列中新进的进程数、每个用户事务的请求数（Transaction_#）、类标签{绿、黄、红}
+	
+	3、要解决的问题：
+	
+	 In all this context, this particular work is driven by the
+	
+	following questions:
+	
+	• which machine learning (ML) classification algorithms are the best
+	to describe the behavior of an application?
+	
+	• how to forecast multiple system/application parameters for subsequent
+	classification?
+	
+	• how much confidence do we obtain from the forecast & classification
+	technique to predict performance anoma-
+	
+	lies?
+	
+	4、实验结果说明的问题
+	
+	 1）没有单一的机器学习算法能够有效的预测所有web事务的响应时间。
+	
+	 2）做参数预测时，应该考虑结合不同的时序模型，来处理时间和负载会发生的变化。
+	
+	5、未来工作
+	
+	 扩展本文的方法，考虑fault-load故障负载和更复杂的实验},
   timestamp = {2012.02.20}
 }
 
@@ -5396,8 +5653,9 @@
 @comment{jabref-meta: groupstree:
 0 AllEntriesGroup:;
 1 ExplicitGroup:综述性文章\;0\;Cai2003p77-86a\;Cotroneo2011p1-6\;Duke2012En
-vironmentDiversity\;avizienis2001fundamental\;wiki20120229software-agi
-ng\;徐建2007软件抗衰研究综述\;;
+vironmentDiversity\;Liu2002p159-170\;Trivedi2000p270-279\;avizienis200
+1fundamental\;vaidyanathan2001extended\;wiki20120229software-aging\;徐建
+2007软件抗衰研究综述\;;
 1 ExplicitGroup:博士论文\;0\;bao2004adaptive\;pop00549\;vaidyanathan2002pr
 oactive\;徐建2006p-\;游静2006细粒度软件抗衰策略及相关技术研究\;王湛2007智能化细粒度软件抗衰策略及相关技术研究\;
 郭成昊2007计算系统的自适应体系结构研究\;;
@@ -5415,8 +5673,9 @@ hevsky2003software\;徐建2006基于免疫遗传的软件衰退检测算法\;;
 4 ExplicitGroup:基于时序分析的预测抗衰\;0\;Araujo2011p38-43\;garg1998methodology\
 ;vaidyanathan1999measurement\;;
 4 ExplicitGroup:基于机器学习的预测抗衰\;0\;Alonso2010p507-516\;Alonso2011p163-170
-\;Andrzejak2008p25-32\;cassidy2002advanced\;simeonov2010proactive\;;
-2 ExplicitGroup:混合方法（模型&度量）\;0\;;
+\;Andrzejak2008p25-32\;Magalhães2010p1-7\;andrzejak2008robust\;cassid
+y2002advanced\;magalhaes2010detection\;simeonov2010proactive\;;
+2 ExplicitGroup:混合方法（模型&度量）\;0\;vaidyanathan2002analysis\;;
 2 ExplicitGroup:抗衰实施技术\;0\;MouraSilva2007p33-44\;candea2004microreboot
 \;garg1996minimizing\;pop00107\;thein2009availability\;;
 1 ExplicitGroup:按研究团队分类\;0\;;
@@ -5454,35 +5713,42 @@ parnas1994software\;;
 7p33-44\;Vaidyanathan2005p124-137\;andrzejak2008robust\;araujo2011soft
 ware\;cassidy2002advanced\;castelli2001proactiveaging\;el2008mining\;g
 uo2008web\;ma2007web\;pop00525\;simeonov2010proactive\;thein2009availa
-bility\;vaidyanathan1999measurement\;vaidyanathan2003mset\;徐建2006基于免疫遗
-传的软件衰退检测算法\;;
+bility\;vaidyanathan1999measurement\;vaidyanathan2001extended\;vaidyan
+athan2003mset\;徐建2006基于免疫遗传的软件衰退检测算法\;;
 1 ExplicitGroup:需阅读\;0\;Alonso2010p507-516\;Anerousis2005p75-88\;El-Sh
 ishiny2008p182-187\;Grottke2006p411-420\;Guo2010p80-83\;Jiang2009p435-
-439\;Kourai2011p839-851\;Matias2006p189-196\;Moorsel2006p547-558\;Triv
-edi2000p270-279\;Vaidyanathan2001p62-71\;Vaidyanathan2005p124-137\;Wan
-g2007p247-265\;Xie2004p122-129\;Yang2010p46-53\;Zhao2008p327-331\;garg
-1998analysis\;grottke2007fighting\;immonen2008survey\;pop00273\;pop005
-43\;salfner2010survey\;shetty2008analysis\;thein2009availability\;tyag
-i2011reliability\;;
+439\;Kourai2011p839-851\;Liu2002p159-170\;Matias2006p189-196\;Moorsel2
+006p547-558\;Trivedi2000p270-279\;Vaidyanathan2001p62-71\;Vaidyanathan
+2005p124-137\;Wang2007p247-265\;Xie2004p122-129\;Yang2010p46-53\;Zhao2
+008p327-331\;garg1998analysis\;grottke2007fighting\;immonen2008survey\
+;pop00273\;pop00543\;salfner2010survey\;shetty2008analysis\;thein2009a
+vailability\;tyagi2011reliability\;;
 1 ExplicitGroup:毕业论文要参考的论文\;0\;Alonso2009p264-269\;Alonso2010p507-516\
 ;Andrzejak2008p25-32\;Araujo2011p38-43\;Barford1998p151-160\;Bobbio199
 8p4-12\;Cai2003p77-86a\;Cotroneo2011p1-6\;Dai2007p781-795\;Diao2003p13
 6-149\;El-Shishiny2008p182-187\;Garg1995p180-187\;Garg1997p88-96\;Grot
 tke2008p1-6\;Huang1995p381-390\;Li2002p91-100\;Magalhães2010p1-7\;Mat
 ias2006p189-196\;Matias2010p102-114\;Mosberger1998p31-37\;Vaidyanathan
-2001p62-71\;Zhang2010p138-140\;araujo2011software\;candea2004microrebo
-ot\;chu2010review\;garg1998analysis\;garg1998methodology\;grottke2007f
-ighting\;immonen2008survey\;lyu2007software\;parnas1994software\;pfeni
-ng1996optimal\;pop00525\;simeonov2010proactive\;tyagi2011reliability\;
-vaidyanathan2001extended\;徐建2006p-\;范新媛2003p1543-1546\;;
+2001p62-71\;Zhang2010p138-140\;araujo2011software\;aung2004software\;c
+andea2004microreboot\;chu2010review\;garg1998analysis\;garg1998methodo
+logy\;grottke2007fighting\;immonen2008survey\;lyu2007software\;parnas1
+994software\;pfening1996optimal\;pop00525\;simeonov2010proactive\;tyag
+i2011reliability\;vaidyanathan2001extended\;徐建2006p-\;范新媛2003p1543-154
+6\;;
+2 ExplicitGroup:集群环境下的软件抗衰\;0\;Vaidyanathan2001p62-71\;Wang2007p247-26
+5\;castelli2001proactiveaging\;;
 1 ExplicitGroup:读书笔记\;0\;yang2011RejuvnationTerms\;yang2012definitionO
 fSoftwareAging\;yang2012软件危机\;yanglu2012noteTmplt\;;
-1 ExplicitGroup:软件容错\;0\;Duke2012Softwarefaulttolerance\;pezze2009hand
-ling\;torres2000software\;;
+1 ExplicitGroup:软件容错\;0\;Duke2012EnvironmentDiversity\;Duke2012Softwar
+efaulttolerance\;pezze2009handling\;torres2000software\;;
 2 ExplicitGroup:AIS与软件容错\;0\;xanthakis1996immune\;;
 1 ExplicitGroup:其他论文\;0\;;
-2 ExplicitGroup:衰退与入侵的区别\;0\;1335467\;;
-2 ExplicitGroup:实验相关\;0\;Matias2010p102-114\;陈锦富2009软件错误注入测试技术研究\;;
-2 ExplicitGroup:软件生命周期\;0\;朱鸿2002web\;钱鸿生2006基于风险管理的软件生命周期模型研究\;;
+2 ExplicitGroup:衰退与入侵的区别\;0\;1335467\;aung2004software\;;
+2 ExplicitGroup:实验相关\;0\;Matias2006p189-196\;Matias2010p102-114\;Moura
+Silva2007p33-44\;castelli2001proactiveaging\;tixeuil2006overview\;陈锦富2
+009软件错误注入测试技术研究\;;
+2 ExplicitGroup:软件生命周期\;0\;朱鸿2002web\;钱鸿生2006p-\;钱鸿生2006基于风险管理的软件生命周期模
+型研究\;;
+2 ExplicitGroup:国内其他中文论文\;0\;linyijie2010Rejuvenation\;;
 }
 
